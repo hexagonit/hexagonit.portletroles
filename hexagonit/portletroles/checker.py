@@ -1,11 +1,11 @@
 from AccessControl import Unauthorized
 from AccessControl import getSecurityManager
 from Acquisition import aq_inner
+from Products.CMFCore.utils import getToolByName
 from plone.app.portlets.interfaces import IPortletPermissionChecker
 from plone.portlets.interfaces import IPortletAssignmentMapping
 from zope.component import adapts
 from zope.interface import implements
-from Products.CMFCore.utils import getToolByName
 
 
 PERMISSIONS = {
