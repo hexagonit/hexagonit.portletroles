@@ -1,0 +1,61 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="hexagonit.portletroles">
+
+  <includeDependencies package="." />
+  <i18n:registerTranslations directory="locales" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="hexagonit.portletroles"
+      directory="profiles/default"
+      description="Installs the hexagonit.portletroles package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <include package=".browser" />
+
+  <permission
+    id="plone.app.portlets.ManageEventsPortlets"
+    title="Portlets: Manage Events portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageLoginPortlets"
+    title="Portlets: Manage Login portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageNavigationPortlets"
+    title="Portlets: Manage Navigation portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageQuickUploadPortlets"
+    title="Portlets: Manage QuickUpload portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageRSSPortlets"
+    title="Portlets: Manage RSS portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageRecentPortlets"
+    title="Portlets: Manage Recent portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageReviewPortlets"
+    title="Portlets: Manage Review portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageSearchPortlets"
+    title="Portlets: Manage Search portlets"
+    />
+
+</configure>
