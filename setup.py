@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='hexagonit.portletroles',
-    version='0.0.0',
+    version='1.0b1',
     description="Provides roles for adding each portlets.",
     long_description=open("README.rst").read(),
     # Get more strings from
