@@ -34,12 +34,14 @@ from zope.interface import implements
 def __call__(self):
     sm = getSecurityManager()
     context = aq_inner(self.context)
-
-    # If the user has the global Manage Portlets permission, let them
-    # run wild
     portlet = context.REQUEST.get('ACTUAL_URL').split('/')[-1]
     registry = getUtility(IRegistry)
-    portlets = registry['hexagonit.portletroles.portlets']
+    portlets = [
+        {
+            item['portlet']: item['permission']
+
+        } for item in registry['hexagonit.portletroles.portlets']
+    ]
     if portlet not in portlets:
         if not sm.checkPermission("Portlets: Manage portlets", context):
             raise Unauthorized("You are not allowed to manage portlets")

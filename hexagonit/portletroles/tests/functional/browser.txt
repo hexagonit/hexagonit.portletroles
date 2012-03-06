@@ -3,9 +3,25 @@ Log in as the portal owner::
     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
-Continue your test::
+Go to registry page::
 
     >>> browser.open('/@@portlet-roles-controlpanel')
 
-    # >>> browser.openBrowser()
+    >>> 'TestPortlet' in browser.contents
+    True
 
+Add TestPortlet::
+
+    >>> browser.getControl(name="crud-add.form.widgets.portlet:list").value = ['haxagonit.portletroles.TestPortlet']
+    >>> browser.getControl(name="crud-add.form.widgets.permission:list").value = ['Portlets: Manage Test portlets']
+    >>> browser.getControl(name="crud-add.form.buttons.add").click()
+
+Log out::
+
+    >>> browser.getLink('Log out').click()
+
+Log in with user2 which role id Editor::
+
+    >>> browser.login(user2, user2)
+
+    >>> browser.open('/@@manage-portlets')

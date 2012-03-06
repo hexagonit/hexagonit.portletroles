@@ -9,7 +9,7 @@
     </permission>
     <permission name="Portlets: Manage Test portlets"
                 acquire="True">
-      <role name="Manager"/>
+      <role name="Editor"/>
     </permission>
   </permissions>
 </rolemap>
