@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="hexagonit.portletroles">
+
+    <configlet
+        title="Portlet Roles Registry"
+        action_id="portlet_roles_registry"
+        appId="hexagonit.portletroles"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@portlet-roles-controlpanel"
+        icon_expr="string:${portal_url}/maintenance_icon.png"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+
+</object>

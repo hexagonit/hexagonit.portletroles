@@ -33,10 +33,10 @@
     title="Portlets: Manage Navigation portlets"
     />
 
-  <permission
+  <!-- <permission
     id="plone.app.portlets.ManageQuickUploadPortlets"
     title="Portlets: Manage QuickUpload portlets"
-    />
+    /> -->
 
   <permission
     id="plone.app.portlets.ManageRSSPortlets"
@@ -57,5 +57,28 @@
     id="plone.app.portlets.ManageSearchPortlets"
     title="Portlets: Manage Search portlets"
     />
+
+  <permission
+    id="plone.app.portlets.ManageCalendarPortlets"
+    title="Portlets: Manage Calendar portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageClassicPortlets"
+    title="Portlets: Manage Classic portlets"
+    />
+
+  <permission
+    id="plone.app.portlets.ManageNewsPortlets"
+    title="Portlets: Manage News portlets"
+    />
+
+  <utility
+    component=".vocabulary.PermissionsVocabularyFactory"
+    name="hexagonit.portletroles.Permissions" />
+  
+  <utility
+    component=".vocabulary.PortletsVocabularyFactory"
+    name="hexagonit.portletroles.Portlets" />
 
 </configure>

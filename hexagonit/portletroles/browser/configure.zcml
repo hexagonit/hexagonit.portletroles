@@ -4,10 +4,10 @@
     i18n_domain="hexagonit.portletroles">
 
   <browser:page
-    name="demo"
-    for="*"
-    class=".template.DemoView"
-    permission="zope2.View"
+    name="portlet-roles-controlpanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".template.PortletRolesControlPanelView"
+    permission="cmf.ManagePortal"
     layer=".interfaces.IHexagonitPortletrolesLayer"
     />
 
