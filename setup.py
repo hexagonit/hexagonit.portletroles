@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='hexagonit.portletroles',
-    version='0.3',
+    version='0.4',
     description="Provides roles for adding each portlets.",
     long_description=open("README.rst").read(),
     # Get more strings from
@@ -26,6 +26,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
+        'collective.monkeypatcher',
         'hexagonit.testing',
         'plone.browserlayer',
         'setuptools',

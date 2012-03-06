@@ -5,5 +5,5 @@ Log in as the portal owner::
 
 Continue your test::
 
-    >>> open(registry_url)
-    
+    >>> browser.open('/@@portlet-roles-controlpanel')
+
