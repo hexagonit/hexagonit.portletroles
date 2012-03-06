@@ -7,3 +7,5 @@ Continue your test::
 
     >>> browser.open('/@@portlet-roles-controlpanel')
 
+    # >>> browser.openBrowser()
+

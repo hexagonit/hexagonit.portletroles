@@ -15,11 +15,14 @@ class HexagonitPortletrolesLayer(PloneSandboxLayer):
         # Load ZCML
         import hexagonit.portletroles
         self.loadZCML(package=hexagonit.portletroles)
+        import hexagonit.portletroles.tests.rolemap
+        self.loadZCML(package=hexagonit.portletroles.tests.rolemap)
 
     def setUpPloneSite(self, portal):
         """Set up Plone."""
         # Install into Plone site using portal_setup
         self.applyProfile(portal, 'hexagonit.portletroles:default')
+        self.applyProfile(portal, 'hexagonit.portletroles.tests.rolemap:default')
 
     def tearDownZope(self, app):
         """Tear down Zope."""
