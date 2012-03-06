@@ -12,10 +12,16 @@ class PermissionsVocabulary(object):
     implements(IVocabularyFactory)
 
     def __call__(self, context):
+        if hasattr(context, 'context'):
+            portal = context.context
+        elif getattr(getSite(), 'Type', None):
+            portal = getSite()
+        else:
+            portal = getSite().context
         names = [
             item[
                 'permission_name'
-            ] for item in getSite().manage_getPermissionMapping()
+            ] for item in portal.manage_getPermissionMapping()
         ]
         items = [SimpleTerm(item, item, item) for item in names]
         return SimpleVocabulary(items)
