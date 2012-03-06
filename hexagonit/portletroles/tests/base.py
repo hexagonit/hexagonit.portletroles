@@ -26,7 +26,6 @@ class HexagonitPortletrolesLayer(PloneSandboxLayer):
 
     def tearDownZope(self, app):
         """Tear down Zope."""
-        
 
 
 FIXTURE = HexagonitPortletrolesLayer()

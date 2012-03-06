@@ -24,28 +24,17 @@ from zope.interface import implements
 # }
 
 
-# class PortletPermissionChecker(object):
-#     implements(IPortletPermissionChecker)
-#     adapts(IPortletAssignmentMapping)
-
-#     def __init__(self, context):
-#         self.context = context
-
 def __call__(self):
     sm = getSecurityManager()
     context = aq_inner(self.context)
     portlet = context.REQUEST.get('ACTUAL_URL').split('/')[-1]
     registry = getUtility(IRegistry)
-    portlets = [
-        {
-            item['portlet']: item['permission']
-
-        } for item in registry['hexagonit.portletroles.portlets']
-    ]
+    portlets = {}
+    for item in registry['hexagonit.portletroles.portlets']:
+        portlets[item['portlet']] = item['permission']
     if portlet not in portlets:
         if not sm.checkPermission("Portlets: Manage portlets", context):
             raise Unauthorized("You are not allowed to manage portlets")
-        ## Should we check portlets dependent permissions here too...?
         return
     permission = portlets[portlet]
     mtool = getToolByName(context, 'portal_membership')
