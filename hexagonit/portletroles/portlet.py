@@ -22,7 +22,6 @@ class Portlet(object):
 
     def __init__(
         self,
-        # name,
         portlet,
         permission,
 

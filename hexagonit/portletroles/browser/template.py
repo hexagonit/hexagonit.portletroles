@@ -14,6 +14,14 @@ class PortletRolesControlPanelForm(crud.CrudForm):
 
     label = _(u'Portlets and Permissions')
 
+    # def update(self):
+    #     super(self.__class__, self).update()
+    #     edit_forms = self.subforms[0]
+    #     forms = edit_forms.subforms
+    #     for form in forms:
+    #         form.widgets['portlet'].field.readonly = True
+    #         import pdb; pdb.set_trace()
+
     def get_items(self):
         registry = getUtility(IRegistry)
         portlets = registry['hexagonit.portletroles.portlets']
@@ -38,8 +46,10 @@ class PortletRolesControlPanelForm(crud.CrudForm):
         """
         registry = getUtility(IRegistry)
         portlets = registry['hexagonit.portletroles.portlets']
-        portlets.append(data)
-        registry['hexagonit.portletroles.portlets'] = portlets
+        items = [item['portlet'] for item in portlets]
+        if data['portlet'] not in items:
+            portlets.append(data)
+            registry['hexagonit.portletroles.portlets'] = portlets
 
     def remove(self, (id, item)):
         """Delete portlet data from hexagonit.portletroles.portlets registry.

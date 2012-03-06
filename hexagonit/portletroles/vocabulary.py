@@ -5,6 +5,7 @@ from zope.interface import implements
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
+from plone.registry.interfaces import IRegistry
 
 
 class PermissionsVocabulary(object):
@@ -41,6 +42,15 @@ class PortletsVocabulary(object):
         left = set(
             getUtility(IPortletManager, name=u"plone.leftcolumn").getAddablePortletTypes()
         )
+        # registry = getUtility(IRegistry)
+        # registered_portlets = [
+        #     item['portlet'] for item in registry['hexagonit.portletroles.portlets']
+        # ]
+        # portlets = [
+        #     item for item in list(
+        #         right.union(left)
+        #     ) if item.addview not in registered_portlets
+        #     ]
         items = [
             SimpleTerm(
                 item.addview,
