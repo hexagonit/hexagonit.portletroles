@@ -1,0 +1,174 @@
+<configure
+  i18n_domain="hexagonit.portletroles"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  xmlns="http://namespaces.zope.org/zope"
+  >
+
+  <!-- Calendar Portlet -->
+  <permission
+    id="plone.app.portlets.ManageCalendarPortlet"
+    title="Portlets: Manage Calendar portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.calendar.AddForm"
+    assignment="plone.app.portlets.portlets.calendar.Assignment"
+    edit_permission="plone.app.portlets.ManageCalendarPortlet"
+    interface="plone.app.portlets.portlets.calendar.ICalendarPortlet"
+    name="portlets.Calendar"
+    renderer="plone.app.portlets.portlets.calendar.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Classic Portlet -->
+  <permission
+    id="plone.app.portlets.ManageClassicPortlet"
+    title="Portlets: Manage Classic portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.classic.AddForm"
+    assignment="plone.app.portlets.portlets.classic.Assignment"
+    edit_permission="plone.app.portlets.ManageClassicPortlet"
+    editview="plone.app.portlets.portlets.classic.EditForm"
+    interface="plone.app.portlets.portlets.classic.IClassicPortlet"
+    name="portlets.Classic"
+    renderer="plone.app.portlets.portlets.classic.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- News Portlet -->
+  <permission
+    id="plone.app.portlets.ManageNewsPortlet"
+    title="Portlets: Manage News portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.news.AddForm"
+    assignment="plone.app.portlets.portlets.news.Assignment"
+    edit_permission="plone.app.portlets.ManageNewsPortlet"
+    editview="plone.app.portlets.portlets.news.EditForm"
+    interface="plone.app.portlets.portlets.news.INewsPortlet"
+    name="portlets.News"
+    renderer="plone.app.portlets.portlets.news.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Events Portlet -->
+  <permission
+    id="plone.app.portlets.ManageEventsPortlet"
+    title="Portlets: Manage Events portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.events.AddForm"
+    assignment="plone.app.portlets.portlets.events.Assignment"
+    edit_permission="plone.app.portlets.ManageEventsPortlet"
+    editview="plone.app.portlets.portlets.events.EditForm"
+    interface="plone.app.portlets.portlets.events.IEventsPortlet"
+    name="portlets.Events"
+    renderer="plone.app.portlets.portlets.events.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Login Portlet -->
+  <permission
+    id="plone.app.portlets.ManageLoginPortlet"
+    title="Portlets: Manage Login portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.login.AddForm"
+    assignment="plone.app.portlets.portlets.login.Assignment"
+    edit_permission="plone.app.portlets.ManageLoginPortlet"
+    interface="plone.app.portlets.portlets.login.ILoginPortlet"
+    name="portlets.Login"
+    renderer="plone.app.portlets.portlets.login.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Navigation Portlet -->
+  <permission
+    id="plone.app.portlets.ManageNavigationPortlet"
+    title="Portlets: Manage Navigation portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.navigation.AddForm"
+    assignment="plone.app.portlets.portlets.navigation.Assignment"
+    edit_permission="plone.app.portlets.ManageNavigationPortlet"
+    editview="plone.app.portlets.portlets.navigation.EditForm"
+    interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
+    name="portlets.Navigation"
+    renderer="plone.app.portlets.portlets.navigation.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Recent Portlet -->
+  <permission
+    id="plone.app.portlets.ManageRecentPortlet"
+    title="Portlets: Manage Recent portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.recent.AddForm"
+    assignment="plone.app.portlets.portlets.recent.Assignment"
+    edit_permission="plone.app.portlets.ManageRecentPortlet"
+    editview="plone.app.portlets.portlets.recent.EditForm"
+    interface="plone.app.portlets.portlets.recent.IRecentPortlet"
+    name="portlets.Recent"
+    renderer="plone.app.portlets.portlets.recent.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Review Portlet -->
+  <permission
+    id="plone.app.portlets.ManageReviewPortlet"
+    title="Portlets: Manage Review portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.review.AddForm"
+    assignment="plone.app.portlets.portlets.review.Assignment"
+    edit_permission="plone.app.portlets.ManageReviewPortlet"
+    interface="plone.app.portlets.portlets.review.IReviewPortlet"
+    name="portlets.Review"
+    renderer="plone.app.portlets.portlets.review.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- RSS Portlet -->
+  <permission
+    id="plone.app.portlets.ManageRSSPortlet"
+    title="Portlets: Manage RSS portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.rss.AddForm"
+    assignment="plone.app.portlets.portlets.rss.Assignment"
+    edit_permission="plone.app.portlets.ManageRSSPortlet"
+    editview="plone.app.portlets.portlets.rss.EditForm"
+    interface="plone.app.portlets.portlets.rss.IRSSPortlet"
+    name="portlets.rss"
+    renderer="plone.app.portlets.portlets.rss.Renderer"
+    view_permission="zope2.View"
+    />
+
+  <!-- Search Portlet -->
+  <permission
+    id="plone.app.portlets.ManageSearchPortlet"
+    title="Portlets: Manage Search portlet"
+    />
+
+  <plone:portlet
+    addview="plone.app.portlets.portlets.search.AddForm"
+    assignment="plone.app.portlets.portlets.search.Assignment"
+    edit_permission="plone.app.portlets.ManageSearchPortlet"
+    editview="plone.app.portlets.portlets.search.EditForm"
+    interface="plone.app.portlets.portlets.search.ISearchPortlet"
+    name="portlets.Search"
+    renderer="plone.app.portlets.portlets.search.Renderer"
+    view_permission="zope2.View"
+    />
+
+</configure>

@@ -15,8 +15,8 @@
     />
 
   <permission
-    id="plone.app.portlets.ManageTestPortlets"
-    title="Portlets: Manage Test portlets"
+    id="hexagonit.portletroles.ManageTestPortlet"
+    title="Portlets: Manage Test portlet"
     />
 
   <include package="plone.app.portlets" />
@@ -25,6 +25,8 @@
     name="haxagonit.portletroles.TestPortlet"
     interface="plone.app.portlets.portlets.news.INewsPortlet"
     assignment="plone.app.portlets.portlets.news.Assignment"
+    view_permission="zope2.View"
+    edit_permission="hexagonit.portletroles.ManageTestPortlet"
     renderer="plone.app.portlets.portlets.news.Renderer"
     addview="plone.app.portlets.portlets.news.AddForm"
     editview="plone.app.portlets.portlets.news.EditForm"

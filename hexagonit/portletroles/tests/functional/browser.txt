@@ -1,27 +1,69 @@
-Log in as the portal owner::
+# Log in as the portal owner::
 
-    >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
-    >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
+#     >>> from plone.app.testing import TEST_USER_NAME, TEST_USER_PASSWORD
+#     >>> browser.login(TEST_USER_NAME, TEST_USER_PASSWORD)
 
-Go to registry page::
+# Go to registry page::
 
-    >>> browser.open('/@@portlet-roles-controlpanel')
+#     >>> browser.open('/@@portlet-roles-controlpanel')
 
-    >>> 'TestPortlet' in browser.contents
-    True
+#     >>> 'TestPortlet' in browser.contents
+#     True
 
-Add TestPortlet::
+# Add TestPortlet::
 
-    >>> browser.getControl(name="crud-add.form.widgets.portlet:list").value = ['haxagonit.portletroles.TestPortlet']
-    >>> browser.getControl(name="crud-add.form.widgets.permission:list").value = ['Portlets: Manage Test portlets']
-    >>> browser.getControl(name="crud-add.form.buttons.add").click()
+#     >>> browser.getControl(name="crud-add.form.widgets.portlet:list").value = ['haxagonit.portletroles.TestPortlet']
+#     >>> browser.getControl(name="crud-add.form.widgets.permission:list").value = ['Portlets: Manage Test portlets']
+#     >>> browser.getControl(name="crud-add.form.buttons.add").click()
 
-Log out::
+    # >>> browser.open('/@@manage-portlets')
+    # >>> browser.openBrowser()
 
-    >>> browser.getLink('Log out').click()
+# Log out::
+
+#     >>> browser.getLink('Log out').click()
 
 Log in with user2 which role id Editor::
 
     >>> browser.login(user2, user2)
 
     >>> browser.open('/@@manage-portlets')
+
+    >>> 'portlets.Calendar' in browser.contents
+    True
+    >>> 'portlets.Classic' in browser.contents
+    True
+    >>> 'portlets.News' in browser.contents
+    False
+    >>> 'portlets.Events' in browser.contents
+    True
+    >>> 'portlets.Login' in browser.contents
+    True
+    >>> 'portlets.Navigation' in browser.contents
+    True
+    >>> 'portlets.Recent' in browser.contents
+    True
+    >>> 'portlets.Review' in browser.contents
+    True
+    >>> 'portlets.rss' in browser.contents
+    True
+    >>> 'portlets.Search' in browser.contents
+    True
+    >>> 'plone.portlet.collection.Collection' in browser.contents
+    True
+    >>> 'plone.portlet.static.Static' in browser.contents
+    True
+
+    >>> '>News</a>' in browser.contents
+    False
+
+Try to add Test portlet::
+
+    >>> browser.open('/++contextportlets++plone.leftcolumn/+/haxagonit.portletroles.TestPortlet')
+
+    >>> browser.getControl(name="form.actions.save").click()
+
+    >>> '>News</a>' in browser.contents
+    True
+
+    # >>> browser.openBrowser()

@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<import-steps>
-  <import-step id="hexagonit.portletroles.various"
-               version="20120306-01"
-               handler="hexagonit.portletroles.setuphandlers.setupVarious"
-               title="hexagonit.portletroles: miscellaneous import steps">
-    <dependency step="registry" />
-  </import-step>
-</import-steps>

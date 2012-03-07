@@ -1,14 +1,15 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="hexagonit.portletroles">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="hexagonit.portletroles"
+  >
 
-  <browser:page
+  <!-- <browser:page
     name="portlet-roles-controlpanel"
     for="Products.CMFPlone.interfaces.IPloneSiteRoot"
     class=".template.PortletRolesControlPanelView"
     permission="cmf.ManagePortal"
     layer=".interfaces.IHexagonitPortletrolesLayer"
-    />
+    /> -->
 
 </configure>

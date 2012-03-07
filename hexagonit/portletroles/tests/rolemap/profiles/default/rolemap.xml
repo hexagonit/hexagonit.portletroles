@@ -7,8 +7,82 @@
       <role name="Site Administrator"/>
       <role name="Editor" />
     </permission>
-    <permission name="Portlets: Manage Test portlets"
+    <permission name="Portlets: Manage Calendar portlet"
                 acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Classic portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage News portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <!-- <role name="Editor"/> -->
+    </permission>
+    <permission name="Portlets: Manage Events portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Login portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Navigation portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Recent portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Review portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage RSS portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Search portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="plone.portlet.collection: Add collection portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="plone.portlet.static: Add static portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor"/>
+    </permission>
+    <permission name="Portlets: Manage Test portlet"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
       <role name="Editor"/>
     </permission>
   </permissions>
