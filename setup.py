@@ -13,7 +13,7 @@ long_description = (
 
 setup(
     name='hexagonit.portletroles',
-    version='0.8',
+    version='0.9',
     description="Provides roles for adding each portlets.",
     long_description=long_description,
     # Get more strings from

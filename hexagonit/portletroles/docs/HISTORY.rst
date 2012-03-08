@@ -1,7 +1,7 @@
 Changelog
 =========
 
-X.X ()
+0.9 (2012-03-08)
 ----------------
 
 - Code cleanups. [taito]
