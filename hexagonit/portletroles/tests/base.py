@@ -16,6 +16,7 @@ class HexagonitPortletrolesLayer(PloneSandboxLayer):
         # Load ZCML
         import hexagonit.portletroles
         self.loadZCML(package=hexagonit.portletroles)
+        self.loadZCML(package=hexagonit.portletroles, name="overrides.zcml")
         import hexagonit.portletroles.tests.rolemap
         self.loadZCML(package=hexagonit.portletroles.tests.rolemap)
 

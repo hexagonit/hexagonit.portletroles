@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.3 (2012-03-06)
-------------------
+0.8 (2012-03-08)
+-----------------
 
-- Initial release
+- Release for production use.

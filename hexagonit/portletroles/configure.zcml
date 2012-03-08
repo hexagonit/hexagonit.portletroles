@@ -16,7 +16,6 @@
 
   <includeDependencies package="." />
   <!-- <five:registerPackage package="." initialize=".initialize" /> -->
-  <includeOverrides file="overrides.zcml" />
 
   <!-- <monkey:patch
     description="Add permissions separately to each portlets."
