@@ -22,7 +22,7 @@
   <include package="plone.app.portlets" />
 
   <plone:portlet
-    name="haxagonit.portletroles.TestPortlet"
+    name="hexagonit.portletroles.TestPortlet"
     interface="plone.app.portlets.portlets.news.INewsPortlet"
     assignment="plone.app.portlets.portlets.news.Assignment"
     view_permission="zope2.View"
