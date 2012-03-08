@@ -1,12 +1,21 @@
 from setuptools import find_packages
 from setuptools import setup
 
+import os
+
+
+long_description = (
+    open(os.path.join("hexagonit", "portletroles", "docs", "README.rst")).read() + "\n" +
+    open(os.path.join("hexagonit", "portletroles", "docs", "HISTORY.rst")).read() + "\n" +
+    open(os.path.join("hexagonit", "portletroles", "docs", "CONTRIBUTORS.rst")).read()
+)
+
 
 setup(
     name='hexagonit.portletroles',
     version='0.8',
     description="Provides roles for adding each portlets.",
-    long_description=open("README.rst").read(),
+    long_description=long_description,
     # Get more strings from
     # http://pypi.python.org/pypi?:action=list_classifiers
     classifiers=[
