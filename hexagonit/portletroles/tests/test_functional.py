@@ -1,10 +1,10 @@
+from Products.CMFCore.utils import getToolByName
 from hexagonit.portletroles.tests.base import FUNCTIONAL_TESTING
 from hexagonit.testing.browser import Browser
-from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
+from plone.app.testing import setRoles
 from plone.testing import layered
 from zope.testing import renormalizing
-from Products.CMFCore.utils import getToolByName
 
 import doctest
 import manuel.codeblock

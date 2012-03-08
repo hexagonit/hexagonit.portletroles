@@ -5,113 +5,15 @@
   xmlns:i18n="http://namespaces.zope.org/i18n"
   xmlns="http://namespaces.zope.org/zope"
   >
-<!-- <configure
-  i18n_domain="hexagonit.portletroles"
-  xmlns:five="http://namespaces.zope.org/five"
-  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
-  xmlns:i18n="http://namespaces.zope.org/i18n"
-  xmlns:monkey="http://namespaces.plone.org/monkey"
-  xmlns="http://namespaces.zope.org/zope"
-  > -->
 
   <includeDependencies package="." />
-  <!-- <five:registerPackage package="." initialize=".initialize" /> -->
-
-  <!-- <monkey:patch
-    description="Add permissions separately to each portlets."
-    class="plone.app.portlets.checker.DefaultPortletPermissionChecker"
-    original="__call__"
-    replacement=".checker.__call__"
-    /> -->
-
-<!--   <monkey:patch
-    description="Avoid authentication error at @@manage-portlets"
-    class="plone.app.portlets.browser.editmanager.EditPortletManagerRenderer"
-    original="addable_portlets"
-    replacement=".portlet.addable_portlets"
-    /> -->
-
-  <!-- <i18n:registerTranslations directory="locales" /> -->
 
   <genericsetup:registerProfile
-    name="default"
-    title="Install hexagonit.portletroles"
-    directory="profiles/default"
     description="Installs the hexagonit.portletroles package"
+    directory="profiles/default"
+    name="default"
     provides="Products.GenericSetup.interfaces.EXTENSION"
+    title="Install hexagonit.portletroles"
     />
-
-  <!-- <genericsetup:registerProfile
-    name="uninstall"
-    title="Uninstall hexagonit.portletroles"
-    directory="profiles/uninstall"
-    description="Uninstalls the hexagonit.portletroles package"
-    provides="Products.GenericSetup.interfaces.EXTENSION"
-    /> -->
-
-  <!-- <include package=".browser" /> -->
-
-  <!-- <permission
-    id="plone.app.portlets.ManageCalendarPortlet"
-    title="Portlets: Manage Calendar portlet"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageEventsPortlet"
-    title="Portlets: Manage Events portlet"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageLoginPortlets"
-    title="Portlets: Manage Login portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageNavigationPortlets"
-    title="Portlets: Manage Navigation portlets"
-    /> -->
-
-  <!-- <permission
-    id="plone.app.portlets.ManageQuickUploadPortlets"
-    title="Portlets: Manage QuickUpload portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageRSSPortlets"
-    title="Portlets: Manage RSS portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageRecentPortlets"
-    title="Portlets: Manage Recent portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageReviewPortlets"
-    title="Portlets: Manage Review portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageSearchPortlets"
-    title="Portlets: Manage Search portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageClassicPortlets"
-    title="Portlets: Manage Classic portlets"
-    /> -->
-
-<!--   <permission
-    id="plone.app.portlets.ManageNewsPortlets"
-    title="Portlets: Manage News portlets"
-    /> -->
-
-  <!-- <utility
-    component=".vocabulary.PermissionsVocabularyFactory"
-    name="hexagonit.portletroles.Permissions" /> -->
-  
-  <!-- <utility
-    component=".vocabulary.PortletsVocabularyFactory"
-    name="hexagonit.portletroles.Portlets" /> -->
 
 </configure>
