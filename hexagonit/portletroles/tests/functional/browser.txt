@@ -59,7 +59,7 @@ Log in with user2 which role id Editor::
 
 Try to add Test portlet::
 
-    >>> browser.open('/++contextportlets++plone.leftcolumn/+/haxagonit.portletroles.TestPortlet')
+    >>> browser.open('/++contextportlets++plone.leftcolumn/+/hexagonit.portletroles.TestPortlet')
 
     >>> browser.getControl(name="form.actions.save").click()
 

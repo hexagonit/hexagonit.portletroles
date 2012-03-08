@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <portlets>
   <portlet
-    addview="haxagonit.portletroles.TestPortlet"
+    addview="hexagonit.portletroles.TestPortlet"
     title="TestPortlet"
     description=""
     />
