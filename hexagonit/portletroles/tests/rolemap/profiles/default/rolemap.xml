@@ -7,6 +7,13 @@
       <role name="Site Administrator"/>
       <role name="Editor" />
     </permission>
+    <!-- Permission for moving and deleting portlets  -->
+    <permission name="Portlets: Manage own portlets"
+                acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Editor" />
+    </permission>
     <permission name="Portlets: Manage Calendar portlet"
                 acquire="True">
       <role name="Manager"/>

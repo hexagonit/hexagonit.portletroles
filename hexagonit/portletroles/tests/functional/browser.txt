@@ -40,3 +40,19 @@ Try to add Test portlet::
 
     >>> '>News</a>' in browser.contents
     True
+
+Add Login portlet::
+
+    >>> browser.open('/++contextportlets++plone.leftcolumn/+/portlets.Login')
+
+Move TestPortlet down::
+
+    >>> browser.getLink('▼').click()
+    >>> '>Show<' in browser.contents
+    False
+    >>> browser.getLink('Hide', index=0).click()
+    >>> '>Show<' in browser.contents
+    True
+    >>> browser.getLink('×', index=1).click()
+    >>> '>News</a>' in browser.contents
+    False

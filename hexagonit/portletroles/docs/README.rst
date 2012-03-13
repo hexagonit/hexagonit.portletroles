@@ -31,6 +31,13 @@ Example `rolemap.xml`::
           <role name="Site Administrator"/>
           <role name="Editor" />
         </permission>
+        <!-- Permission for moving and deleting portlets  -->
+        <permission name="Portlets: Manage own portlets"
+                acquire="True">
+          <role name="Manager"/>
+          <role name="Site Administrator"/>
+          <role name="Editor" />
+        </permission>
         <permission name="Portlets: Manage Events portlet"
                     acquire="True">
           <role name="Manager"/>
@@ -49,3 +56,7 @@ Example `rolemap.xml`::
 With this `rolemap.xml` User who has `Editor` role can add and manage Events portlet, but not Login portlet.
 
 You can find which permissions are registered from overrides.zcml file in the package.
+
+Permission for moving and deleting portlets is controled by `Portlets: Manage own portlets`.
+
+
