@@ -35,13 +35,11 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'collective.monkeypatcher',
         'hexagonit.testing',
         'plone.app.portlets',
         'plone.browserlayer',
         'setuptools',
         'z3c.autoinclude',
-        'zope.i18nmessageid',
     ],
     entry_points="""
     # -*- Entry points: -*-

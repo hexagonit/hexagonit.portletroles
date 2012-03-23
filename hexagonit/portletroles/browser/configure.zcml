@@ -1,7 +1,0 @@
-<configure
-  i18n_domain="hexagonit.portletroles"
-  xmlns:browser="http://namespaces.zope.org/browser"
-  xmlns="http://namespaces.zope.org/zope"
-  >
-
-</configure>
