@@ -22,7 +22,7 @@ class TestCase(IntegrationTestCase):
         self.assertEqual(
             setup.getVersionForProfile('profile-hexagonit.portletroles:default'),
             u'1'
-        )    
+        )
 
     def test_uninstall__hexagonit_portletroles_not_installed(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')
