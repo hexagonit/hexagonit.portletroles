@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <layers>
   <layer
-      name="hexagonit.portletroles"
-      interface="hexagonit.portletroles.browser.interfaces.IHexagonitPortletrolesLayer"
-      />
+    interface="hexagonit.portletroles.browser.interfaces.IHexagonitPortletrolesLayer"
+    name="hexagonit.portletroles"
+    />
 </layers>
