@@ -1,11 +1,12 @@
+======================
 hexagonit.portletroles
 ======================
 
-`hexagonit.portletroles` overrides each portlets for Plone to provide different edit_view permissions to those portlets.
+`hexagonit.portletroles` overrides each portlets for Plone to provide different edit_view permissions to them.
 
 Assigning different roles to those permissons happens through rolemap.xml.
 
-Only who has permission can manage portlets through `@@manage-portlets` now.
+Only who has permission can manage portlets through `@@manage-portlets` then.
 
 Further Documentation URL
 -------------------------
@@ -53,10 +54,8 @@ Example `rolemap.xml`::
       </permissions>
     </rolemap>
 
-With this `rolemap.xml` User who has `Editor` role can add and manage Events portlet, but not Login portlet.
+With this `rolemap.xml`, user who has `Editor` role can add and manage Events portlet, but not Login portlet.
 
 You can find which permissions are registered from overrides.zcml file in the package.
 
-Permission for moving and deleting portlets is controled by `Portlets: Manage own portlets`.
-
-
+Permission for deleting and moving up/down portlets is controled by permission: `Portlets: Manage own portlets`.
