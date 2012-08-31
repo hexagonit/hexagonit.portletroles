@@ -1,5 +1,5 @@
-from hexagonit.portletroles.tests.base import IntegrationTestCase
 from Products.CMFCore.utils import getToolByName
+from hexagonit.portletroles.tests.base import IntegrationTestCase
 
 
 class TestCase(IntegrationTestCase):
@@ -21,8 +21,7 @@ class TestCase(IntegrationTestCase):
         setup = getToolByName(self.portal, 'portal_setup')
         self.assertEqual(
             setup.getVersionForProfile('profile-hexagonit.portletroles:default'),
-            u'1'
-        )
+            u'1')
 
     def test_uninstall__hexagonit_portletroles_not_installed(self):
         installer = getToolByName(self.portal, 'portal_quickinstaller')

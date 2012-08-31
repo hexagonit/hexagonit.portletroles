@@ -1,4 +1,3 @@
-hexagonit/portletroles/docs/_build/*
 *.egg-info
 *.mo
 *.pyc
@@ -7,4 +6,5 @@ hexagonit/portletroles/docs/_build/*
 .DS_Store
 .long-description.html
 dist
+hexagonit/portletroles/docs/_build/*
 setup.cfg

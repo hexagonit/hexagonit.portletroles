@@ -1,4 +1,4 @@
-Log in with user2 which role id Editor::
+Log in with user2 which has Editor role::
 
     >>> browser.login(user2, user2)
 
@@ -27,6 +27,8 @@ Log in with user2 which role id Editor::
     >>> 'plone.portlet.collection.Collection' in browser.contents
     True
     >>> 'plone.portlet.static.Static' in browser.contents
+    True
+    >>> 'hexagonit.portletroles.TestPortlet' in browser.contents
     True
 
     >>> '>News</a>' in browser.contents
